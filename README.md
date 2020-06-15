@@ -88,7 +88,7 @@ There two requests came at 1592171101990 and 1592171102930 respectively. In spit
 is less than 1 sec, second request will be processed anyway, because the first bucket will be considered as
 outdated. Assuming uniform distribution of requests we will have 1000 / (interval width) * 0.5 percent false positive
 outcomes. For 100ms interval it's about 5%. We can decrease this number by squashing the interval width. So, for 10ms
-the error will be around 0.5% and 1ms 0.05% and so on. If to be a 100% precise, each bucket may store references
+the error will be around 0.5% and for 1ms is 0.05% and so on. To be a 100% precise, each bucket may store references
 to all requests timestamps within the bucket, so when we perform a last bucket out of date operation we go through all
 requests within the bucket and compute actual total within a last second.
 
