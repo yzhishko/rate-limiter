@@ -74,7 +74,7 @@ and so on ...
 
 ## Analysis
 
-In a brute-force solutions the may store incoming requests in descending order, but that would require to traverse back
+In a brute-force solutions we may store incoming requests in descending order, but that would require to traverse back
 all requests happened in a last second that gives a time and space complexity of O(n). Using bucketing with sliding 
 window approach requires effective constant space and time complexity, because number of buckets and traverses 
 do not exceed a constant 1000 / interval width (in our case it's 10). 
